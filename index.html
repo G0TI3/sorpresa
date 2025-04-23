@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un mes contigo ❤️</title>
+  <style>
+    img {
+      max-width: 40%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  
+
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #fdeff9, #ecf0f1);
+    color: #333;
+    text-align: center;
+    }
+
+    header {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: rgba(255, 192, 203, 0.2);
+    }
+
+    .carousel {
+    position: relative;
+    max-width: 90%;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .slide {
+    display: none;
+    position: relative;
+    transition: opacity 1s ease-in-out; /* Transición suave */
+    }     
+
+    .slide img {
+    width: 60%;  /* Tamaño de las imágenes */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    }
+
+    .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    max-width: 90%;
+    }
+
+    .audio-control {
+    margin-top: 2rem;
+    }
+</style>
+</head>
+<body>
+  <header>
+    💖 1 mes contigo... y ya eres mi todo 💖
+  </header>
+
+  <div class="carousel">
+    <div class="slide">
+      <img src="foto1.jpg" alt="Foto 1">
+      <div class="caption">Desde que llegaste, sonrío más bonito.</div>
+    </div>
+    <div class="slide">
+      <img src="foto2.jpg" alt="Foto 2">
+      <div class="caption">Tus ojos tienen ese algo que me calma.</div>
+    </div>
+    <div class="slide">
+      <img src="foto3.jpg" alt="Foto 3">
+      <div class="caption">Un mes contigo... y ya no me imagino sin ti.</div>
+    </div>
+    <div class="slide">
+      <img src="foto4.jpg" alt="Foto 4">
+      <div class="caption">Cada momento a tu lado es un recuerdo precioso.</div>
+    </div>
+    <div class="slide">
+      <img src="foto5.jpg" alt="Foto 5">
+      <div class="caption">Eres mi lugar seguro, lo unico que quiero junto a mi.</div>
+    </div>
+  </div>
+
+  <div class="audio-control">
+    <audio id="bg-music" controls loop>
+      <source src="eres.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = 'none');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.display = 'block';
+      setTimeout(showSlides, 6000);
+    }
+
+    window.onload = showSlides;
+  </script>
+</body>
+</html>
