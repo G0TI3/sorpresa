@@ -5,66 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Un mes contigo ❤️</title>
   <style>
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-  
-
     body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #fdeff9, #ecf0f1);
-    color: #333;
-    text-align: center;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #fdeff9, #ecf0f1);
+      color: #333;
+      text-align: center;
     }
-
     header {
-    padding: 2rem;
-    font-size: 2rem;
-    background-color: rgba(255, 192, 203, 0.2);
+      padding: 2rem;
+      font-size: 2rem;
+      background-color: rgba(255, 192, 203, 0.2);
     }
-
     .carousel {
-    position: relative;
-    max-width: 90%;
-    margin: 2rem auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      position: relative;
+      max-width: 90%;
+      margin: 2rem auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
-
     .slide {
-    display: none;
-    position: relative;
-    transition: opacity 1s ease-in-out; /* Transición suave */
-    }     
-
+      display: none;
+      position: relative;
+      transition: opacity 1s ease-in-out;
+      padding-bottom: 2rem;
+    }
     .slide img {
-    width: 40%;  /* Tamaño de las imágenes */
-    height: auto;
-    margin: 0 auto;
-    display: block;
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto 1rem;
+      display: block;
+      border-radius: 16px;
     }
-
     .caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    max-width: 90%;
+      position: static;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin: 0 auto;
+      max-width: 85%;
     }
-
     .audio-control {
-    margin-top: 2rem;
+      margin-top: 2rem;
     }
-</style>
+    @media (min-width: 600px) {
+      .slide img {
+        width: 60%;
+        max-width: none;
+      }
+      .caption {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
